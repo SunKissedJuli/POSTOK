@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Note_Item"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:background="@color/stone">
+
+        <TextView
+            android:id="@+id/NoteItemText"
+            android:text="Тут идёт длиное описание юзера абоба абоба абоба абоба абоба абоба абоба"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:textColor="@color/brown"
+            android:fontFamily="sans-serif"
+            android:textSize="14dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/NoteItemPlantName"
+                    android:text="Общая запись"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:textColor="@color/brown"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="20dp"/>
+                <TextView
+                    android:id="@+id/NoteItemData"
+                    android:text="11.03.2024"
+                    android:textSize="14dp"
+                    android:gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="120dp"
+                    android:textColor="@color/brown"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+        </LinearLayout>
+
+
+
+</LinearLayout>

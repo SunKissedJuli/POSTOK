@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.AutorizeFragment"
+        android:id="@+id/Fragment_Autorize"
+        android:background="@color/blue">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/white">
+
+
+            <LinearLayout
+                android:id="@+id/MainLayout"
+                android:gravity="center_vertical"
+                android:layout_width="303dp"
+                android:layout_height="448dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="РЕГИСТРАЦИЯ"
+                    android:textSize="25dp"
+                    android:id="@+id/NameRegistration"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Логин:"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/UserLogin"
+                    android:textSize="20dp"
+                    android:padding="5dip"
+                    android:inputType="text"
+                    android:layout_gravity="center"
+                    android:background="@drawable/roundedblue_edittext"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brown"
+                    android:layout_width="260dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:text="Пароль:"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/UserPassword"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:padding="5dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/roundedblue_edittext"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brown"
+                    android:layout_width="260dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/PasswordRepeatView"
+                    android:text="Повторите пароль:"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/UserPasswordRepeat"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:padding="5dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/roundedblue_edittext"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brown"
+                    android:layout_width="260dp"
+                    android:layout_height="40dp" />
+
+                <Button
+                    android:id="@+id/RegistrationButton"
+                    android:onClick="onClick"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/brown"
+                    android:layout_gravity="center"
+                    android:textSize="15dp"
+                    android:text="зарегистрироваться"
+                    android:layout_width="230dp"
+                    android:layout_height="37dp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/ToAutorizationButton"
+            android:onClick="onClick"
+            android:background="@drawable/roundedborder_button"
+            android:layout_marginTop="530dp"
+            android:textColor="@color/brown"
+            android:textSize="15dp"
+            android:text="Уже есть аккаунт?"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>

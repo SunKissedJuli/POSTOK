@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".Fragments.PlantPageFragment"
+        android:id="@+id/Fragment_Plant_Page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:background="@color/blue"
+            android:clickable="true"
+            android:gravity="top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@color/stone"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true">
+            <LinearLayout
+                android:id="@+id/HeadUserLayout"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/stone"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/NewPlantPhoto"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/round_imagebutton" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/PlantName"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Название растения"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/brown"
+                        android:textColorHint="@color/brown"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/PlantDiscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="Тут можно написать описание растения"
+                        android:maxHeight="100dp"
+                        android:padding="10dp"
+                        android:textColor="@color/brown"
+                        android:textColorHint="@color/brown"
+                        android:textSize="16dp" />
+                    <Button
+                        android:id="@+id/ChangeNewPlantPhotoButton"
+                        android:layout_width="140dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_button"
+                        android:fontFamily="sans-serif-medium"
+                        android:onClick="onClick"
+                        android:text="Изменить"
+                        android:textColor="@color/brown"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+                <LinearLayout
+                    android:background="@color/stone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <Button
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/PolivePlantButton"
+                        android:onClick="onClick"
+                        android:text="полив"
+                        android:background="@color/stone"
+                        android:textColor="@color/brown"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"/>
+                    <Button
+                        android:id="@+id/PhotoPlantButton"
+                        android:onClick="onClick"
+                        android:text="фото"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/stone"
+                        android:textColor="@color/brown"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"/>
+                    <Button
+                        android:id="@+id/NotesPlantButton"
+                        android:onClick="onClick"
+                        android:text="Записи"
+                        android:background="@color/stone"
+                        android:textColor="@color/brown"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:visibility="gone"
+            android:id="@+id/NestedSctollPlantPolive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+               <include layout="@layout/shedule_item"/>
+
+               <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/stone"
+                    android:orientation="horizontal">
+
+                   <LinearLayout
+                        android:layout_width="260dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Добавить полив"
+                            android:textColor="@color/brown"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="9dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Полив Название растения"
+                            android:textColor="@color/brown"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="9dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Дата"
+                            android:textColor="@color/brown"
+                            android:textSize="16dp" />
+
+                        <Button
+                            android:id="@+id/NewAddPoliveButton"
+                            android:layout_width="140dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/rounded_button"
+                            android:fontFamily="sans-serif-medium"
+                            android:onClick="onClick"
+                            android:text="Добавить"
+                            android:textColor="@color/brown"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/blue" />
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/drop"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:textSize="16dp"
+                                android:hint="150"
+                                android:maxWidth="60dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="МЛ"
+                                android:fontFamily="sans-serif-medium"
+                                android:textSize="16dp"
+                                android:textColor="@color/brown"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ListView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/PoliveHistoryListView"
+                    android:background="@color/blue"
+                    android:dividerHeight="15dp"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/NestedScrollPlantNote"
+                android:visibility="gone"
+                android:fillViewport="true"
+                android:layout_marginTop="273dp"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="67dp">
+
+                <ListView
+                    android:id="@+id/NotePlantListView"
+                    android:background="@color/blue"
+                    android:dividerHeight="15dp"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                </ListView>
+            </androidx.core.widget.NestedScrollView>
+            <LinearLayout
+                android:id="@+id/PlantBlackout"
+                android:visibility="gone"
+                android:layout_marginBottom="67dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal" />
+
+            <include
+                layout="@layout/bottomsheet_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+
+        </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

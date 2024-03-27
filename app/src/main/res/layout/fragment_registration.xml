@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Fragment_Registration"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.RegistrationFragment"
+        android:background="@color/blue">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/SetImage"
+                android:background="@drawable/round_imagebutton"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:onClick="onClick">
+
+            </ImageButton>
+            <TextView
+                android:text="Никнейм:"
+                android:textSize="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/NewUserName"
+                android:textSize="20dp"
+                android:padding="5dip"
+                android:inputType="text"
+                android:maxLength="17"
+                android:layout_gravity="center"
+                android:background="@drawable/roundedwhite_edittext"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/brown"
+                android:layout_width="300dp"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:text="Немного о себе:"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/NewUserDescription"
+                android:textSize="20dp"
+                android:gravity="top"
+                android:maxLength="100"
+                android:padding="15dip"
+                android:layout_gravity="center"
+                android:background="@drawable/roundedwhite_edittext"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/brown"
+                android:layout_width="300dp"
+                android:layout_height="200dp" />
+
+            <Button
+                android:id="@+id/NextButton"
+                android:onClick="onClick"
+                android:background="@drawable/roundedborder_button"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/brown"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:text="Дальше >>"
+                android:layout_width="230dp"
+                android:layout_height="37dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Blackout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal" />
+        <LinearLayout
+            android:id="@+id/BottomSheet"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@drawable/roundedwhite_layout"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="80dp"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/NextButton"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            tools:ignore="NotSibling"
+            android:visibility="gone">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+                <TableRow android:gravity="center_horizontal" android:layout_marginTop="35dp">
+                    <ImageButton
+                        android:scaleType="fitXY"
+                        android:background="@drawable/avatar1"
+                        android:src="@drawable/roundsmall_imagebutton"
+                        android:id="@+id/SetImageFromBottomSheet"
+                        android:layout_gravity="center"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="onClick"
+                        tools:ignore="DuplicateIds"/>
+                    <ImageButton
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:scaleType="fitEnd"
+                        android:background="@drawable/avatar2"
+                        android:src="@drawable/roundsmall_imagebutton"
+                        android:layout_gravity="center"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="onClick"
+                        tools:ignore="DuplicateIds" />
+                    <ImageButton
+                        android:scaleType="fitXY"
+                        android:background="@drawable/avatar3"
+                        android:src="@drawable/roundsmall_imagebutton"
+                        android:layout_gravity="center"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="onClick"
+                        tools:ignore="DuplicateIds" />
+                </TableRow>
+                <TableRow android:gravity="center_horizontal" android:layout_marginTop="15dp">
+                    <ImageButton
+                        android:scaleType="fitXY"
+                        android:background="@drawable/avatar4"
+                        android:src="@drawable/roundsmall_imagebutton"
+                        android:layout_gravity="center"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="onClick"
+                        tools:ignore="DuplicateIds"/>
+                    <ImageButton
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/avatar5"
+                        android:src="@drawable/roundsmall_imagebutton"
+                        android:layout_gravity="center"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="onClick"
+                        tools:ignore="DuplicateIds" />
+                    <ImageButton
+                        android:scaleType="fitXY"
+                        android:background="@drawable/avatar6"
+                        android:src="@drawable/roundsmall_imagebutton"
+                        android:layout_gravity="center"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="onClick"
+                        tools:ignore="DuplicateIds" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

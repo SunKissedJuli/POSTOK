@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".Fragments.AddPlantFragment"
+        android:id="@+id/Fragment_Add_Plant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/blue"
+        android:clickable="true"
+        android:gravity="top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/HeadUserLayout"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/stone"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/NewPlantPhoto"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/round_imagebutton" />
+
+                    <Button
+                        android:id="@+id/ChangeNewPlantPhotoButton"
+                        android:layout_width="130dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_button"
+                        android:fontFamily="sans-serif-medium"
+                        android:onClick="onClick"
+                        android:text="Сменить фото"
+                        android:textColor="@color/brown"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/NewPlantName"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/roundedblue_edittext"
+                        android:fontFamily="sans-serif-black"
+                        android:hint="Название растения"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/brown"
+                        android:textColorHint="@color/brown"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/NewPlantDiscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/roundedblue_edittext"
+                        android:fontFamily="sans-serif"
+                        android:hint="Тут можно написать описание растения"
+                        android:maxHeight="100dp"
+                        android:padding="15dp"
+                        android:textColor="@color/brown"
+                        android:textColorHint="@color/brown"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        <include layout="@layout/shedule_item"
+            android:layout_marginTop="240dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="420dp"
+            android:background="@color/stone"
+            android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ваш последний полив"
+                android:textColor="@color/brown"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Полив Название растения"
+                android:textColor="@color/brown"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Дата"
+                android:textColor="@color/brown"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/NewAddPoliveButton"
+                android:layout_width="140dp"
+                android:layout_height="28dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="onClick"
+                android:text="Добавить"
+                android:textColor="@color/brown"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/blue" />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/drop"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="45dp"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:hint="150"
+                    android:maxWidth="60dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="МЛ"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="16dp"
+                    android:textColor="@color/brown"/>
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:layout_marginTop="600dp"
+            android:background="@color/stone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Тут будет информация из API"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/brown"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/SaveNewPlantButton"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="sans-serif-black"
+                android:onClick="onClick"
+                android:text="Сохранить растение"
+                android:textColor="@color/brown"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
